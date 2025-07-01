@@ -6,6 +6,7 @@ serif = "DejaVu Serif"
 filename = r"filepath"
 ObsID = "ObsID  = "
 C, N, O = ["$C = $", "$N = $", "$O = $"]
+HEII = "HEII 0"
 norm1, norm2, norm3, norm4, norm5, norm6 = []
 sigma, cstat, bins, flux = ["$sigma = $", "$cstat = $", "$N = $", "$flux = $"]
 save_path_meg = r"C:\Users\fmeza\Downloads\research data\yoursavepathmeg.png"
@@ -69,7 +70,7 @@ def meg_action():
     plt.ylim(0, .2)
     plt.plot(histwvs[0], histmods[0], color='green', linewidth=3, label = "model")
     plt.errorbar(megwvs, megvals, xerr=megbins, yerr=megerrors, fmt='.', alpha=0.4, color='blue', linewidth=1.5, label = "data")
-    plt.annotate('ζ pup MEG group10_HEII 1', xy=(13, .15), xytext=(5.1, .19), fontsize = 19)
+    plt.annotate(f'ζ pup MEG group10 {HEII}', xy=(13, .15), xytext=(5.1, .19), fontsize = 19)
     plt.annotate(ObsID, xy=(13, .15), xytext=(5.1, .17), fontsize = 17, fontname = 'serif')
     plt.annotate(C, xy=(13, .06), xytext=(9, .19), fontsize = 17, fontname = 'serif')
     plt.annotate(N, xy=(13, .06), xytext=(10.5, .19), fontsize = 17, fontname = 'serif')
@@ -95,7 +96,7 @@ def heg_action():
     plt.ylim(0, .12)
     plt.plot(histwvs[1], histmods[1], color='orange', linewidth=2, label = "model")
     plt.errorbar(hegwvs, hegvals, xerr=hegbins, yerr=hegerrors, fmt='.', alpha=1, color='gray', linewidth=2)
-    plt.annotate('ζ pup HEG group10_HEII 1', xy=(13, .115), xytext=(4.8, .115), fontsize = 19, fontname = 'serif')
+    plt.annotate(f'ζ pup HEG group10 {HEII}', xy=(13, .115), xytext=(4.8, .115), fontsize = 19, fontname = 'serif')
     plt.annotate(ObsID, xy=(13, .076), xytext=(4.8, .1), fontsize = 19, fontname = 'serif')
     plt.annotate(C, xy=(13, .06), xytext=(7.5, .115), fontsize = 17, fontname = 'serif')
     plt.annotate(N, xy=(13, .06), xytext=(8.5, .115), fontsize = 17, fontname = 'serif')
@@ -126,7 +127,7 @@ def both_action():
     plt.plot(histwvs[1], histmods[1], color='orange', linewidth=4, label = "model")
     plt.errorbar(hegwvs, hegvals, xerr=hegbins, yerr=hegerrors, fmt='.', alpha=0.4, color='gray', linewidth=2)
     #annotations
-    plt.annotate('ζ pup group10_HEII 1', xy=(13, .15), xytext=(5.1, .19), fontsize = 19, fontname = 'serif')
+    plt.annotate(f'ζ pup group10 {HEII}'f'ζ pup group10 {HEII}', xy=(13, .15), xytext=(5.1, .19), fontsize = 19, fontname = 'serif')
     plt.annotate(ObsID, xy=(13, .15), xytext=(5.1, .17), fontsize = 19, fontname = 'serif')
     plt.annotate(C, xy=(13, .06), xytext=(9, .19), fontsize = 17, fontname = 'serif')
     plt.annotate(N, xy=(13, .06), xytext=(10.5, .19), fontsize = 17, fontname = 'serif')
