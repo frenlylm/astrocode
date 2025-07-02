@@ -3,15 +3,15 @@ plt.rcParams["font.family"] = "DejaVu Serif"
 serif = "DejaVu Serif"
 
 #all code needed to change is here!
-filename = r"filepath"
-ObsID = "ObsID  = "
-C, N, O = ["$C = $", "$N = $", "$O = $"]
+filename = r"\\wsl.localhost\Ubuntu\home\fmeza\heasoft-6.35.1\Xspec\data\zpup_20158\20158_grp10helike_martin_HEII0.dat"
+ObsID = "ObsID  = 20158"
+C, N, O = ["$C = 0.01486$", "$N = 18.6371$", "$O = 0.2757$"]
 HEII = "HEII 0"
-norm1, norm2, norm3, norm4, norm5, norm6 = []
+norm1, norm2, norm3, norm4, norm5, norm6 = [1, 2, 3, 4, 5, 6]
 sigma, cstat, bins, flux = ["$sigma = $", "$cstat = $", "$N = $", "$flux = $"]
-save_path_meg = r"C:\Users\fmeza\Downloads\research data\yoursavepathmeg.png"
-save_path_heg = r"C:\Users\fmeza\Downloads\research data\yoursavepathheg.png"
-save_path_both = r"C:\Users\fmeza\Downloads\research data\yoursavepathboth.png"
+save_path_meg = r"C:\Users\fmeza\Downloads\research data\savefile.png"
+save_path_heg = r"C:\Users\fmeza\Downloads\research data\savefile.png"
+save_path_both = r"C:\Users\fmeza\Downloads\research data\savefile.png"
 
 def readfile(filename):
     with open(filename, "r") as datfile:
@@ -87,7 +87,7 @@ def meg_action():
     plt.annotate(flux, xy=(13, .055), xytext=(14, .07), fontsize = 19, fontname = 'serif')
     plt.xlabel('Wavelength (Å)', fontsize = 19, fontname = 'serif')
     plt.ylabel('Counts (s$^{-1}$ Å$^{-1}$)', fontsize = 19, fontname = 'serif')
-    plt.savefig(save_path_meg)
+    #plt.savefig(save_path_meg)
     plt.show()
 
 def heg_action():
@@ -113,7 +113,7 @@ def heg_action():
     plt.annotate(flux, xy=(13, .055), xytext=(11, 0.035), fontsize = 19, fontname = 'serif')
     plt.xlabel('Wavelength (Å)', fontsize = 19, fontname = 'serif')
     plt.ylabel('Counts (s$^{-1}$ Å$^{-1}$)', fontsize = 19, fontname = 'serif')
-    plt.savefig(save_path_heg)
+    #plt.savefig(save_path_heg)
     plt.show()
     
 def both_action():
@@ -127,7 +127,7 @@ def both_action():
     plt.plot(histwvs[1], histmods[1], color='orange', linewidth=4, label = "model")
     plt.errorbar(hegwvs, hegvals, xerr=hegbins, yerr=hegerrors, fmt='.', alpha=0.4, color='gray', linewidth=2)
     #annotations
-    plt.annotate(f'ζ pup group10 {HEII}'f'ζ pup group10 {HEII}', xy=(13, .15), xytext=(5.1, .19), fontsize = 19, fontname = 'serif')
+    plt.annotate(f'ζ pup group10 {HEII}', xy=(13, .15), xytext=(5.1, .19), fontsize = 19, fontname = 'serif')
     plt.annotate(ObsID, xy=(13, .15), xytext=(5.1, .17), fontsize = 19, fontname = 'serif')
     plt.annotate(C, xy=(13, .06), xytext=(9, .19), fontsize = 17, fontname = 'serif')
     plt.annotate(N, xy=(13, .06), xytext=(10.5, .19), fontsize = 17, fontname = 'serif')
@@ -144,7 +144,7 @@ def both_action():
     plt.annotate(flux, xy=(13, .055), xytext=(14, .07), fontsize = 19, fontname = 'serif')
     plt.xlabel('Wavelength (Å)', fontsize = 19, fontname = 'serif')
     plt.ylabel('Counts (s$^{-1}$ Å$^{-1}$)', fontsize = 19, fontname = 'serif')
-    plt.savefig(save_path_both)
+    #plt.savefig(save_path_both)
     plt.show()
 
 meg_action()    
