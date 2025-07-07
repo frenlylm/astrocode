@@ -92,9 +92,11 @@ def meg_action():
     plt.annotate(f"$\\mathrm{{norm}}_6 = {norm6}$", xy=(17, .145), xytext=(18, .115), fontsize = 19, fontname = 'serif')
     plt.annotate(sigma, xy=(13, .145), xytext=(18, .1), fontsize = 19, fontname = 'serif')
     plt.annotate(flux, xy=(13, .055), xytext=(18, .085), fontsize = 19, fontname = 'serif')
+    plt.xticks(fontsize=15) 
+    plt.yticks(fontsize=15) 
     plt.xlabel('Wavelength (Å)', fontsize = 19, fontname = 'serif')
     plt.ylabel('Counts (s$^{-1}$ Å$^{-1}$)', fontsize = 19, fontname = 'serif')
-    #plt.savefig(save_path_meg)
+    plt.savefig(save_path_meg)
     plt.show()
 
 def heg_action():
@@ -118,9 +120,11 @@ def heg_action():
     plt.annotate(f"$\\mathrm{{norm}}_6 = {norm6}$", xy=(13, .065), xytext=(15, .065), fontsize = 19, fontname = 'serif')
     plt.annotate(sigma, xy=(13, .055), xytext=(15, .055), fontsize = 19, fontname = 'serif')
     plt.annotate(flux, xy=(13, .055), xytext=(15, 0.045), fontsize = 19, fontname = 'serif')
+    plt.xticks(fontsize=15) 
+    plt.yticks(fontsize=15) 
     plt.xlabel('Wavelength (Å)', fontsize = 19, fontname = 'serif')
     plt.ylabel('Counts (s$^{-1}$ Å$^{-1}$)', fontsize = 19, fontname = 'serif')
-    #plt.savefig(save_path_heg)
+    plt.savefig(save_path_heg)
     plt.show()
     
 def both_action():
@@ -149,9 +153,11 @@ def both_action():
     plt.annotate(f"$\\mathrm{{norm}}_6 = {norm6}$", xy=(17, .145), xytext=(18, .115), fontsize = 19, fontname = 'serif')
     plt.annotate(sigma, xy=(13, .145), xytext=(18, .1), fontsize = 19, fontname = 'serif')
     plt.annotate(flux, xy=(13, .055), xytext=(18, .085), fontsize = 19, fontname = 'serif')
+    plt.xticks(fontsize=15) 
+    plt.yticks(fontsize=15) 
     plt.xlabel('Wavelength (Å)', fontsize = 19, fontname = 'serif')
     plt.ylabel('Counts (s$^{-1}$ Å$^{-1}$)', fontsize = 19, fontname = 'serif')
-    #plt.savefig(save_path_both)
+    plt.savefig(save_path_both)
     plt.show()
 
 meg_action()    
